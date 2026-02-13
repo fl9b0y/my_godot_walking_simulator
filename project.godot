@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="walking_game"
+run/main_scene="uid://djqt2u30pblhp"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

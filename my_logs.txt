@@ -1,0 +1,8 @@
+13 Feb 2026 
+the main premise of the game is a character that walks from point a to point b 
+what ill need 
+ground added
+player added 
+environment added 
+point A and point B 
+ill add the fancy stuff afterwards 
