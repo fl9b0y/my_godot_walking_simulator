@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://djqt2u30pblhp"]
 
-[ext_resource type="PackedScene" uid="uid://clppablere02v" path="res://ground.tscn" id="1_f3sb7"]
-[ext_resource type="PackedScene" uid="uid://h71hmq2m78by" path="res://player.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://clppablere02v" path="res://scenes/ground.tscn" id="1_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://h71hmq2m78by" path="res://scenes/player.tscn" id="2_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://bqh1avpy5fysv" path="res://scenes/point_b.tscn" id="3_4wyf3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_f3sb7"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -25,11 +26,14 @@ environment = SubResource("Environment_tlwt5")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="ground" parent="." unique_id=1887714351 instance=ExtResource("1_f3sb7")]
+[node name="ground" parent="." unique_id=1887714351 instance=ExtResource("1_rwgxs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 
-[node name="player" parent="." unique_id=465516831 instance=ExtResource("2_fj7yv")]
+[node name="player" parent="." unique_id=465516831 instance=ExtResource("2_4wyf3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1103447788]
-transform = Transform3D(-2.5809564e-08, -0.5, 0.8660254, -1.4901159e-08, 0.8660254, 0.5, -1, 0, -2.9802319e-08, 4, 3, 0)
+[node name="Camera3D" type="Camera3D" parent="player" unique_id=1103447788]
+transform = Transform3D(1, 0, 0, 0, 0.98333436, 0.1818065, 0, -0.1818065, 0.9833343, 0.2652812, 1.7219524, 2.7870216)
+
+[node name="point_B" parent="." unique_id=383057638 instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2728188, -3)
