@@ -6,6 +6,12 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4flbx"]
 
+[sub_resource type="PrismMesh" id="PrismMesh_3vyb7"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g2els"]
+albedo_color = Color(0, 0, 0, 1)
+
 [node name="player" type="CharacterBody3D" unique_id=465516831]
 script = ExtResource("1_4flbx")
 
@@ -14,3 +20,14 @@ mesh = SubResource("CapsuleMesh_sh265")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1037476643]
 shape = SubResource("CapsuleShape3D_4flbx")
+
+[node name="camera_pivot" type="Node3D" parent="." unique_id=1211185211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="player_camera" type="Camera3D" parent="camera_pivot" unique_id=913770690]
+transform = Transform3D(1, 0, 0, 0, 0.8926724, 0.45070618, 0, -0.45070618, 0.8926724, 0, 0.25883436, 2.6322293)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=324525729]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, 1.0000001, 0, -1.0000001, 2.9802322e-08, 0, 0.87641335, -0.25062194)
+mesh = SubResource("PrismMesh_3vyb7")
+surface_material_override/0 = SubResource("StandardMaterial3D_g2els")
